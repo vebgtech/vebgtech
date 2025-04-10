@@ -1,0 +1,514 @@
+/*importa a fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/*reset global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/*deixa a rolagem suave clicando em links âncora*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050844;
+  color: white;
+}
+
+/*cabeçalho*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dae5f7;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+}
+
+/*estilizações botões cabeçalho*/
+.menu-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #6C63FF;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  font-weight: 600 !important;
+}
+
+.btn:hover {
+  background-color: #dae5f7;
+  color: #6C63FF;
+  font-weight: 600 !important;
+}
+
+.highlight {
+  background-color: #050844;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600 !important;
+}
+
+/*estilização do botão que leva ao topo*/
+.botao-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+}
+
+.botao-topo img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.botao-topo:hover img {
+  transform: scale(1.1);
+}
+
+/*estilizações intro*/
+.hero {
+  height: 100vh;
+  background: url('../img/fundo.png') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.content h1 {
+  padding: 30px 40px;
+  border-radius: 30px;
+  display: inline-block;
+  background-color: #32299294;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-weight: 600 !important;
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*estilizações conheça a vebg tech*/
+.conheca {
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.titulo-container h1 {
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  background-color: #6C63FF;
+  font-size: 2.5em;
+  margin: 30px;
+  color: white;
+  font-weight: 600 !important;
+}
+
+.descricao-container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*containers missão, visão e valores*/
+.caixas-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
+.box-um {
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 30px;
+  padding: 50px;
+  text-align: justify;
+  flex: 1;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.box-dois {
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 30px;
+  padding: 50px;
+  text-align: justify;
+  flex: 1;
+  min-width: 500px;
+  max-width: 400px;
+}
+
+.box-tres {
+  background-color: #6C63FF;
+  color: white;
+  border-radius: 30px;
+  padding: 50px;
+  text-align: left;
+  flex: 1;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.icone {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+/*estilizações equipe*/
+.titulo-equipe-centralizada {
+  text-align: center;
+}
+
+.titulo-equipe-centralizada h1 {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600 !important;
+  display: inline-block;
+  background-color: #6C63FF;
+  font-size: 2.5em;
+  margin: 70px;
+  color: white;
+  font-weight: 600 !important;
+  margin-top: 150px;
+}
+
+.equipe-container {
+  max-width: 2300px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  position: relative;
+  text-align: center;
+}
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.foto {
+  background: white;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 15px rgba(72, 53, 247, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 1 1 300px;
+  max-width: 290px;
+  min-width: 200px;
+}
+
+.foto:hover {
+  transform: translateY(-5px);
+}
+
+.foto img {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  border-radius: 20px;
+}
+
+.foto p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600 !important;
+  color: #333;
+}
+
+/*estilização popups front e back-end*/
+.popup-trigger {
+  color: #6C63FF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(11, 13, 59, 0.85);
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  z-index: 1000;
+  width: 300px;
+}
+
+.popup-content {
+  position: relative;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #6C63FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*estilizações nossos serviços*/
+.container-roxo {
+  background-color: #6C63FF;
+  padding: 60px 40px;
+  border-radius: 40px;
+  text-align: center;
+  max-width: 1540px;
+  margin: 150px auto 0 auto;
+}
+
+.titulo {
+  font-size: 2em;
+  font-weight: 600 !important;
+  color: white;
+  background-color: #050844;
+  border-radius: 30px;
+  padding: 20px 30px;
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  width: fit-content;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 100px;
+  background-color: #050844;
+  padding: 60px 40px 90px;
+  text-align: center;
+  border-radius: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-box {
+  background-color: #6C63FF;
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  color: #fffdfd;
+  font-size: 1.4em;
+  margin-top: 0;
+}
+
+.service-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+  border-radius: 30px;
+  border: 2px solid white;
+  background-color: white;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*estilizações contato*/
+.contato {
+  color: white;
+  padding: 50px 100px;
+  margin: 50px;
+  gap: 50px;
+}
+
+.contato h1 {
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  background-color: #6C63FF;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: 600 !important;
+  text-align: center;
+  width: 100%;
+  width: fit-content;
+  margin-top: 70px;
+}
+
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  border-radius: 30px;
+}
+
+.contato-info {
+  flex: 1;
+}
+
+.contato-info div {
+  background-color: #6C63FF;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  font-weight: 600 !important;
+}
+
+.contato-info h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600 !important;
+}
+
+.contato-info p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.contato-info iframe {
+  margin-bottom: 20px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+/*estilizações forms*/
+.contato-form {
+  flex: 1;
+  background-color: #6C63FF;
+  padding: 15px;
+  border-radius: 30px;
+  align-self: center;
+  height: auto;
+}
+
+.contato-form div {
+  margin-bottom: 15px;
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #674179;
+  border-radius: 30px;
+  background-color: #050844;
+  color: white;
+  box-sizing: border-box;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: #6C63FF;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.contato-form button {
+  background-color: #050844;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.contato-form button:hover {
+  background-color: #5751D9;
+}
+
+/*feedback do forms ao usuário*/
+.was-validated .form-control:valid~.valid-feedback,
+.was-validated .form-check-input:valid~.valid-feedback {
+  display: block;
+  color: #00ffcc;
+  font-weight: 600 !important;
+}
+
+.was-validated .form-control:invalid~.invalid-feedback,
+.was-validated .form-check-input:invalid~.invalid-feedback {
+  display: block;
+  color: #ff5c8d;
+  font-weight: 600 !important;
+}
+
+.form-control:valid {
+  border-color: #00ffcc;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 204, 0.25);
+}
+
+.form-control:invalid {
+  border-color: #ff5c8d;
+  box-shadow: 0 0 0 0.2rem rgba(255, 92, 141, 0.25);
+}
+
+.form-check-input:valid {
+  border-color: #00ffcc;
+  background-color: #00ffcc;
+}
+
+.form-check-input:invalid {
+  border-color: #ff5c8d;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+/*estilização rodapé*/
+footer {
+  background-color: #dae5f7;
+  padding: 20px;
+  text-align: center;
+  color: #050844;
+}
