@@ -1,7 +1,7 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
+$servidor = "talentos";
+$usuario = "vebgtech";
+$senha = "Projeto12325";
 $banco = "vebg";
 
 //criar a coneção
@@ -11,4 +11,5 @@ $conn = new mysqli($servidor, $usuario, $senha, $banco);
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
+
 ?>
